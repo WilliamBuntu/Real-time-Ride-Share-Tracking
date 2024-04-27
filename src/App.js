@@ -1,3 +1,4 @@
+
 import {
   Box,
   Button,
@@ -9,6 +10,7 @@ import {
   SkeletonText,
   Text,
 } from "@chakra-ui/react";
+
 import { FaLocationArrow, FaTimes } from "react-icons/fa";
 
 import {
@@ -62,10 +64,10 @@ function App() {
   }
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
   });
-
+  
   const [activeMarker, setActiveMarker] = useState(null);
   const [origin, setOrigin] = useState("");
 
@@ -75,6 +77,7 @@ function App() {
     }
     setActiveMarker(marker);
   };
+
 
   const [map, setMap] = useState(/** @type google.maps.Map */ (null));
   const [directionsResponse, setDirectionsResponse] = useState(null);
@@ -159,14 +162,14 @@ function App() {
           )}
         </GoogleMap>
       </Box>
-      <Box
-        p={4}
-        borderRadius="lg"
-        m={4}
+      <Box 
+        p={2}
+        borderRadius="sm"
+        m={20}
         bgColor="white"
         shadow="base"
         minW="container.md"
-        zIndex="1"
+        zIndex="50"
       >
         <HStack spacing={2} justifyContent="space-between">
           <Box flexGrow={1}>
@@ -206,7 +209,7 @@ function App() {
           </Box>
 
           <ButtonGroup>
-            <Button colorScheme="pink" type="submit" onClick={calculateRoute}>
+            <Button colorScheme="green" type="submit" onClick={calculateRoute}>
               Calculate Route
             </Button>
             <IconButton
