@@ -15,12 +15,12 @@ const Layout = ({children}) => {
             Startup
   
         </div> 
-        <div className='w-screen  lg:hidden flex text-md h-14 bg-white fixed z-40 rounded-r-lg top-14 left-0 pt-3 pl-2'>
+        {/* <div className='w-screen  lg:hidden flex text-md h-14 bg-white fixed z-40 rounded-r-lg top-14 left-0 pt-3 pl-2'>
           <h2 className=' font-bold text-gray-700'>Nyabugogo - Kimironko</h2>
           <p className='text-sm text-gray-600 font-medium'>Next stop: <span>Kacyiru park</span></p>
           <p className='text-sm text-gray-600 font-medium'>Distance:<span> 23km </span>&nbsp;&nbsp;&nbsp; Time:<span> 23 Minutes</span></p>
 
-        </div>
+        </div> */}
         {/* <div className='w-[20vw] hidden lg:block fixed text-md h-[17vh] bg-white  lg:z-40 rounded-r-lg lg:bottom-20 lg:left-0 pt-3 pl-2'>
           <h2 className=' font-bold text-gray-700'>Nyabugogo - Kimironko</h2>
           <p className='text-sm text-gray-600 font-medium'>Next stop: <span>Kacyiru park</span></p>
