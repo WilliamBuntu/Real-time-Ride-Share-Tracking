@@ -20,18 +20,25 @@ import {
 } from '@react-google-maps/api'
 import { useRef, useState } from 'react'
 
-const center = { lat: 48.8584, lng: 2.2945 }
+
+
+const center = { lat: -1.939826787816454, lng: 30.0445426438232  }
 
 function App() {
+  console.log(process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY ,
     libraries: ['places'],
   })
+
+
 
   const [map, setMap] = useState(/** @type google.maps.Map */ (null))
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
   const [duration, setDuration] = useState('')
+
+  
 
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()
@@ -79,7 +86,7 @@ function App() {
         {/* Google Map Box */}
         <GoogleMap
           center={center}
-          zoom={15}
+          zoom={12}
           mapContainerStyle={{ width: '100%', height: '100%' }}
           options={{
             zoomControl: false,
