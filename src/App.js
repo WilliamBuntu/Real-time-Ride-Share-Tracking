@@ -93,7 +93,7 @@ function App() {
     return <SkeletonText />;
   }
 
-  async function calculateRoute() {
+  async function  calculateRoute() {
     if (originRef.current.value === "" || destiantionRef.current.value === "") {
       return;
     }
@@ -176,7 +176,7 @@ function App() {
             <Autocomplete>
               <Input
                 type="text"
-                placeholder="Origin"
+                placeholder="Starting Point"
                 ref={originRef}
                 value={origin}
                 onChange={(e) => setOrigin(e.target.value)}
